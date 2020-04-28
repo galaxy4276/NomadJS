@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momenterm</title>
+  <link rel="stylesheet", href="src/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="timeBox">
+      <h2 id="timeBoxContent"></h2>
+    </div>
+
+
+    <div class="helloUser">
+      <h2 id="helloTitle">Hello?</h2>
+      <input type="text", placeholder="Input Your Name.", id="helloUserInput">
+    </div>
+
+
+    <div class="toDoBox">
+      <input type="text", placeholder="Write To Do...", class="toDoInput">
+      <div class="pending">
+        <p class="stateName">Pending</p>
+        <ul class="pendingContent">
+        </ul>
+      </div>
+      <div class="finished">
+        <p class="statename">Finished</p>
+        <ul class="finishedContent">
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="src/time.js"></script>
+  <script src="src/nameStore.js"></script>
+  <script src="src/index.js"></script>
+</body>
+</html>
