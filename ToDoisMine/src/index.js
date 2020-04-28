@@ -12,6 +12,7 @@ let doneDos = []; // finished job..
 const inputBox = document.querySelector('#helloUserInput');
 const userNameDiv = document.querySelector('.helloUser');
 const helloTitle = document.querySelector('#helloTitle');
+const logoutBtn = document.querySelector('#logoutBtn');
 
 
 
@@ -34,15 +35,21 @@ const loadUser = () => {
   }
 }
 
+const hideLogout = () => {
+  logoutBtn.style.display = 'none';
+};
+
 
 // toDo Box Hide Function 
 const hideContent = () => {
+  hideLogout();
   toDoBox.style.display = 'none';
 };
 
 const unHideContent = () => {
   toDoBox.style.display = 'block';
   loadPending();
+  loadFinished();
 };
 
 //toDo Box mainly Function..
@@ -83,11 +90,18 @@ const saveFinished = () => {
 
 const loadPending = () => {
   let getPendingList = JSON.parse(localStorage.getItem('PENDING'));
-  console.log('pendingList'); 
-  console.log(getPendingList);
   if (getPendingList !== null) {
     getPendingList.forEach(elm => {
       printPending(elm.text);
+    });
+  }
+};
+
+const loadFinished = () => {
+  let getFinshedList = JSON.parse(localStorage.getItem('FINISHED'));
+  if (getFinshedList !== null) {
+    getFinshedList.forEach(elm => {
+      printFinished(elm.text);
     });
   }
 };
