@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet", href="src/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <h1 id="title">Random Number Game</h1>
+    <h3 id="randomAlert">Let's Start Game!</h3>
+    <input type="range", value="0", max="200", step="1", id="randomSlider">
+
+    <br />
+
+    <span class="content">Guess the number:</span>
+    <input type="text", id="userInput">
+    <button>Play!</button>
+    <button id="clearBtn">Clear</button>
+    <div class="result"></div>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+</html>
