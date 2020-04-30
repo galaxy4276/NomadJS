@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet", href="./src/styles.css" />
-</head>
-<body>
-  <div class="wrapper">
-    <input type="text", id="resultBox" />
-    <button id="a" class="resultBtn">C</button>
-    <button id="b">7</button>
-    <button id="c">8</button>
-    <button id="d">9</button>
-    <button id="e", class="orange">+</button>
-    <button id="f">4</button>
-    <button id="g">5</button>
-    <button id="h">6</button>
-    <button id="minus", class="orange">-</button>
-    <button id="i">1</button>
-    <button id="j">2</button>
-    <button id="k">3</button>
-    <button id="l", class="orange">*</button>
-    <button id="m">0</button>
-    <button id="n">=</button>
-    <button id="o", class="orange">/</button>
-  </div>
-  <script src="./src/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet", href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="text", id="resultBox" />
+      <button id="a" class="clearBtn">C</button>
+      <button id="b", onclick="add(null, 7)">7</button>
+      <button id="c", onclick="add(null, 8)">8</button>
+      <button id="d", onclick="add(null, 9)">9</button>
+      <button id="e", onclick="verifyOverLap('+')", class="orange">+</button>
+      <button id="f", onclick="add(null, 4)">4</button>
+      <button id="g", onclick="add(null, 5)">5</button>
+      <button id="h", onclick="add(null, 6)">6</button>
+      <button id="minus", onclick="verifyOverLap('-')", class="orange">-</button>
+      <button id="i", onclick="add(null, 1)">1</button>
+      <button id="j", onclick="add(null, 2)">2</button>
+      <button id="k", onclick="add(null, 3)">3</button>
+      <button id="l", onclick="verifyOverLap('*')", class="orange">*</button>
+      <button id="m", onclick="add(null, 0)">0</button>
+      <button id="n", id="resultBtn", onclick="calculate()">=</button>
+      <button id="o", onclick="verifyOverLap('/')", class="orange">/</button>
+    </div>
+    <input class="hiddenCal">
+    <script src="./src/index.js"></script>  
+  </body>
 </html>

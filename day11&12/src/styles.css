@@ -15,6 +15,10 @@ html, body {
   justify-content: center;
 }
 
+.hiddenCal {
+  display: hidden;
+}
+
 input {
   grid-column: 1 / 4;
   outline-style: none;
@@ -23,33 +27,35 @@ input {
   border-style: none;
   background-color: black;
   color: white;
-}
+  font-size: 15pt;
+}  
 
 button {
   margin: 3px;
   border-style: none;
   background-color: rgb(119, 119, 119);
-  border-radius: 5px;
+  border-radius: 10px;
   outline-style: none;
   color: white;
-}
+}  
 
 button:active {
   background-color: rgb(88, 88, 88);
 
-}
+}  
 
 .orange:active {
   background-color: rgb(197, 129, 4);
-}
+}  
 
-.resultBtn {
+.clearBtn {
   background-color: rgb(170, 170, 170);
-}
+}  
 
-.resultBtn:active {
+.clearBtn:active {
   background-color: rgb(155, 153, 153);
-}
+}  
+
 
 .orange {
   background-color: orange;
@@ -75,3 +81,4 @@ button:active {
 #m {
   grid-column: 1 / 3;
 }
+
