@@ -1,9 +1,15 @@
-setTimeout(function()  {
-  console.log('안녕?'), 1
-});
-setTimeout(function()  {
-  console.log('내이름은'), 1
-});
-setTimeout(function()  {
-  console.log('이현동'), 1
-});
+var a = 1;
+function outer () {
+  console.log(a);
+
+  function inner () {
+    console.log(a);
+    var a = 3;
+  }
+
+  inner ();
+  console.log(a);
+}
+
+outer();
+console.log(a);
